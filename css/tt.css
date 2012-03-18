@@ -1,0 +1,152 @@
+
+html body * {
+	color: black;
+}
+#container {
+	background-color: #D7EAF3 !important;
+min-height: 1000px;		
+}
+
+br.clear { clear:both; } 
+
+h1 {
+	color: #FFF !important;
+	font-family: verdana;	
+	font-size: 36px;
+	text-transform: lowercase;
+	-webkit-text-shadow: 3px 3px #999;
+}
+#header {
+	text-align: left;
+	background-color: #0094C2;
+	padding: 15px;
+	margin: 0px 0 15px 0;
+}
+
+h3 {
+	margin-bottom: 5px;
+}
+
+#search-form {
+	float: right;
+}
+
+#profile h2 {
+	margin-top: 15px;
+	font-size: 30px;
+}
+
+#profile h2,
+#profile img,
+#left, #right {
+	display:inline;
+	float:left;
+}
+#profile img {
+	vertical-align: baseline;
+}
+
+#left>div,
+#right>div {
+	clear:both;
+	padding: 10px;
+	margin: 10px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	-webkit-border-radius: 5px;
+}
+
+#left>div {
+	background-color: #F5F5F5;	
+}
+
+#tweets {
+}
+
+#status {
+	text-align:center;
+	font-size: 18px;
+}
+
+#profile, #stream {
+}
+
+#profile {
+	width: 250px;
+}
+#stream {
+	width: 700px;
+}
+
+#profile img {
+	margin-right: 10px;
+}
+
+h2 {
+	font-size: 24px;
+	color: #000;
+}
+
+#stream {
+	background-color: #FFFFFF !important;
+	padding: 0;
+}
+#stream h2 {
+	margin-bottom: 5px;
+}
+
+#tweets li {
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	padding: 15px;
+	clear: both;
+	min-height: 150px;
+	color: black;
+}
+
+
+#tweets li span {
+	display:block;
+	margin-bottom: 5px;
+}
+
+#tweets li span.artist {
+	font-size: 16px;
+}
+
+#tweets li span.title {
+	font-size: 20px;
+	
+	margin-bottom: 15px;
+}
+
+#tweets li span.tweet-text {
+	text-align:right;
+	clear:right;
+}
+#tweets li span.tweet-time {
+	text-align:right;
+	font-size: 10px;
+}
+
+#tweets li span.user {
+	float:right;
+	text-align: right;
+	font-size: 18px;
+	margin-left: 20px;
+	margin-bottom: 40px;
+}
+#tweets li span.user img {
+	margin-left: 5px;
+}
+
+#tweets li span.player {
+	float: left;
+	margin-right: 20px;
+}
+
+#refresh { float:right; }
+
+#searches li {
+	padding: 3px;
+}

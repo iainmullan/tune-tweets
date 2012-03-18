@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Kitchen Sink</title>
+	<link rel="stylesheet" href="sp://import/css/adam.css" />
+    <link rel="stylesheet" href="sp://import/css/api.css" />
+    <link rel="stylesheet" href="/css/tt.css" />
+</head>
+<body>
+	<div id="container">
+
+	<div id="header">
+		<form id="search-form">
+			<input id="search-box" />
+			<button id="search-go" class="sp-button">Search</button>
+		</form>
+		<h1>Tune Tweets</h1>
+	</div>
+	
+<div id="left">
+	<div id="profile">
+		<img src="https://twimg0-a.akamaihd.net/profile_images/1887404901/image_reasonably_small.jpg" id="avatar" width="50" height="50" />
+		<h2 id="username">@iainmullan</h2>
+		
+		<br class="clear" />
+	</div>
+
+	<div id="searches">
+		<h3>Popular Searches</h3>
+		<ul>
+			<li><a href="#sxsw">SXSW</a></li>
+			<li><a href="#rock">Rock</a></li>
+			<li><a href="#radiohead">Radiohead</a></li>
+			<li><a href="#radiohead">Queen</a></li>
+		</ul>
+		<!-- <ul>
+			<li><a id="search-all">SEARCH ALL</a><li>
+		</ul> -->
+	</div>
+
+</div>
+
+<div id="right">
+	<div><span id="status"></span>
+		<button class="sp-button" id="refresh">Refresh</button>
+	</div>
+	<div id="stream">
+		<h2>Tweets</h2>
+		<ul id="tweets">
+		
+		</ul>
+	</div>
+</div>
+
+
+	<br class="clear" />
+</div>
+		
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/tt.js"></script>
+    <script type="text/javascript" src="js/twitter.js"></script>
+	<script>
+		twitter.search('sxsw');
+	</script>
+	
+	
+</body>
+</html>
+	
