@@ -17,7 +17,7 @@ twitter = {
 			term = 'open.spotify.com';
 		}
 			
-		$('#status').html("Searching...");
+		$('#status').html("Searching... "+term);
 		
 		var url = "http://search.twitter.com/search.json?q="+term+"&rpp=100&include_entities=1&result_type=recent";
 		
@@ -72,7 +72,7 @@ twitter = {
 							var playlist = new models.Playlist();
 							playlist.add(track);
 							var playerView = new views.Player();
-							playerView.track = null; // Don't play the track right away
+							playerView.track = track; // Don't play the track right away
 							playerView.context = playlist;
 							/* Pass the player HTML code to the #player <div /> */
 							$('#'+tweet.id_str+' span.player').append(playerView.node);

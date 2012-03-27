@@ -30,7 +30,7 @@ $(document).ready(function() {
 	$('#search-form').submit(function() {
 		term = $('#search-box').val();
 		console.log('search: '+term);
-//		$('#current-search').html(term);
+		$('#current-search').html(term);
 		twitter.search(term, true);
 	});
 
