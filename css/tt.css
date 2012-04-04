@@ -150,3 +150,12 @@ h2 {
 #searches li {
 	padding: 3px;
 }
+
+#artist-tweets {
+	width: auto;
+}
+#artist-tweets li {
+	width: auto;
+	white-space: normal;
+}
+
