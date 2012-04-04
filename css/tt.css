@@ -151,11 +151,19 @@ h2 {
 	padding: 3px;
 }
 
+#artist-twitter .credits {
+	margin-top: 20px;
+	font-size: 10px;
+	text-align: right;
+}
+
 #artist-tweets {
-	width: auto;
+	width: 240px;
 }
 #artist-tweets li {
-	width: auto;
+	width: 230px;
 	white-space: normal;
+	padding: 5px 0;
+	border-bottom: 1px solid #ccc;
 }
 
