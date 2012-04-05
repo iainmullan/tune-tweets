@@ -44,25 +44,30 @@ function en_twitter_lookup() {
 		
 		console.log("new twitter artist: "+artistName);
 
-		$('#artist-twitter .name').html(artistName);
+		$('#artist-twitter .artist').html(artistName);
 		$('#artist-tweets').html('');
 		$('#artist-twitter .handle').html('');
-	
+		$('#artist-twitter .profile').hide();
+
 		var url = 'http://developer.echonest.com/api/v4/artist/profile?api_key=N6E4NIOVYMTHNDM8J&name='+artistName+'&format=json&bucket=id:twitter';
 
 		$.get(url, function(data) {
 			if (data.response.artist.foreign_ids) {
+
+				$('#artist-twitter .not-on').hide();
+
 				artistHandle = data['response']['artist']['foreign_ids']['0']['foreign_id'];
 				bits = artistHandle.split(':');
 				artistHandle = bits[2];
 				twitterLink = '<a href="http:/twitter.com/'+artistHandle+'">@'+artistHandle+"</a>";
+
+				$('#artist-twitter .handle').html(twitterLink);
 				
 				en_twitter_load(artistHandle);
 			} else {
-				twitterLink = 'Not on Twitter :-(';
+				$('#artist-twitter .not-on').show();
 			}
 
-			$('#artist-twitter .handle').html(twitterLink);
 		});
 
 	} else {
@@ -75,16 +80,23 @@ function en_twitter_load(artistHandle) {
 
 	// lookup twitter profile - load name, profile pic, bio etc.
 	// fetch recent tweets
-	url = "https://api.twitter.com/1/users/lookup.json?screen_name="+artistHandle
+	url = "https://api.twitter.com/1/users/lookup.json?screen_name="+artistHandle;
 
 	$.get(url, function(data) {
+		data = data[0];
 		console.log(data);
 		
 		// name
+//		$('#artist-twitter .profile .name').html(data.name);
 		
 		// description
-		
+		$('#artist-twitter .profile .bio').html(data.description);
+//		alert(data.description);
+
 		// profile_image_url
+		$('#artist-avatar').attr('src', data.profile_image_url);
+		
+		$('#artist-twitter .profile').show();
 		
 		// load follow button?
 	});
@@ -127,9 +139,7 @@ $(document).ready(function() {
 
   	sp.trackPlayer.addEventListener("playerStateChanged", function (event) {
 		console.log(event);
-        if (!event.data.curcontext) {
-			now_playing();
-        }
+		now_playing();
     });
 
 });

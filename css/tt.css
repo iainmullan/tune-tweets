@@ -151,6 +151,38 @@ h2 {
 	padding: 3px;
 }
 
+#artist-twitter .profile {
+	background-color: #eee;
+	padding: 3px;
+}
+#artist-twitter .profile .profile-text{
+	float:left;
+}
+
+#artist-twitter p.not-on {
+	text-align:center;
+	font-style:italic;
+	color: #999;
+	padding: 20px 0;
+}
+
+#artist-twitter .profile img {
+	float: left;
+	width: 48px;
+	height: 48px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+
+#artist-twitter .profile .handle {
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+#artist-twitter .profile .bio {
+	font-style: italic;
+	color: #999;
+}
+
 #artist-twitter .credits {
 	margin-top: 20px;
 	font-size: 10px;
