@@ -49,7 +49,7 @@ function en_twitter_lookup() {
 		$('#artist-twitter .handle').html('');
 		$('#artist-twitter .profile').hide();
 
-		var url = 'http://developer.echonest.com/api/v4/artist/profile?api_key=N6E4NIOVYMTHNDM8J&name='+artistName+'&format=json&bucket=id:twitter';
+		var url = 'http://developer.echonest.com/api/v4/artist/profile?api_key=OTAVE95YVB2ZFSP2N&name='+artistName+'&format=json&bucket=id:twitter';
 
 		$.get(url, function(data) {
 			if (data.response.artist.foreign_ids) {
